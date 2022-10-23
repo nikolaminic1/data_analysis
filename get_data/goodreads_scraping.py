@@ -34,14 +34,15 @@ def requests_list():
 
 
 def extract_names():
-    list_of_chars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "*"]
+    list_of_chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', "*"]
 
     with open('./names.txt', 'r+') as outfile:
         data = outfile.readlines()
         for name in data:
-            striped_name = name.strip()
-            striped_name.replace()
-            print(striped_name)
+            pass
+
+        # adding possibiliti to remplace all the numbers in names and live only strings that are later gonna be
+        # stored in txt file for finding the full names
 
 
 if __name__ == '__main__':

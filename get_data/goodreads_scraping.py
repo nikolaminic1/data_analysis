@@ -34,17 +34,39 @@ def requests_list():
 
 
 def extract_names():
-    list_of_chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', "*"]
+    list_of_chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', "*", "Â"]
 
     with open('./names.txt', 'r+') as outfile:
         data = outfile.readlines()
+        list_final_names = list()
         for name in data:
-            pass
+            striped_name = name.strip()
+            final_name = str()
+            for char in striped_name:
+                if char not in list_of_chars:
+                    final_name += char
+            list_final_names.append(final_name)
 
+    with open('./final_names.txt', 'w') as fn_file:
+        for k in list_final_names:
+            fn_file.write(k.strip('.').strip())
+            fn_file.write('\n')
+
+        fn_file.close()
         # adding possibility to replace all the numbers in names and live only strings that are later going to be
         # stored in txt file for finding the full names
 
 
+def fetch_profiles():
+    with open('./final_names.txt', 'r') as i_file:
+        list_of_names = i_file.readlines()
+        striped_list = [i.strip() for i in list_of_names]
+        print(striped_list)
+
+        i_file.close()
+
+
 if __name__ == '__main__':
     # requests_list()
-    extract_names()
+    # extract_names()
+    fetch_profiles()

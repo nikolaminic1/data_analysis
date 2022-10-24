@@ -41,7 +41,7 @@ def extract_names():
         for name in data:
             pass
 
-        # adding possibiliti to remplace all the numbers in names and live only strings that are later gonna be
+        # adding possibility to replace all the numbers in names and live only strings that are later going to be
         # stored in txt file for finding the full names
 
 

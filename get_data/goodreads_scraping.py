@@ -53,8 +53,6 @@ def extract_names():
             fn_file.write('\n')
 
         fn_file.close()
-        # adding possibility to replace all the numbers in names and live only strings that are later going to be
-        # stored in txt file for finding the full names
 
 
 def fetch_profiles():
